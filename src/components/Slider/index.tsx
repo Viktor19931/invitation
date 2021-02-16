@@ -1,6 +1,12 @@
 import { useEffect, useState, FC } from "react";
 
-import Wrapper, { BackgroundImage, BackgroundOverlay } from "./Wrapper";
+import Wrapper, {
+  BackgroundImage,
+  BackgroundOverlay,
+  Title,
+  Content,
+  Subtitle,
+} from "./Wrapper";
 
 const bgs = [
   "https://templatekit.hellokuro.com/kunikaa/wp-content/uploads/2020/10/bg-header-2-wedding-rings-PKSEZUT.jpg",
@@ -10,7 +16,7 @@ const bgs = [
 
 const SLIDE_INTERVAL = 5000;
 
-const Header: FC = () => {
+const Slider: FC = () => {
   const [activeIndex, setIndex] = useState(0);
 
   useEffect(() => {
@@ -19,7 +25,7 @@ const Header: FC = () => {
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setIndex((p) => (p === 2 ? 0 : p + 1));
+      setIndex((prevState) => (prevState === 2 ? 0 : prevState + 1));
     }, SLIDE_INTERVAL);
 
     return () => clearInterval(intervalId);
@@ -28,7 +34,11 @@ const Header: FC = () => {
   return (
     <Wrapper>
       <BackgroundOverlay />
-      <Background activeIndex={activeIndex} />
+      <Background {...{ activeIndex }} />
+      <Content>
+        <Subtitle>the wedding of</Subtitle>
+        <Title>Viktor &Mariana</Title>
+      </Content>
     </Wrapper>
   );
 };
@@ -41,21 +51,16 @@ const Background: FC<BackgroundProps> = ({ activeIndex }) => {
   const [canAnimate, setCanAnimate] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => setCanAnimate(true), 0);
+    setTimeout(() => setCanAnimate(true), 10);
 
     return () => {
-      setCanAnimate(false);
-      setTimeout(() => {}, 0);
+      setTimeout(() => setCanAnimate(false), 0);
     };
   }, [activeIndex]);
 
   return (
-    <BackgroundImage
-      src={bgs[activeIndex]}
-      {...{ canAnimate }}
-      alt="header image"
-    />
+    <BackgroundImage alt="rings" {...{ canAnimate }} src={bgs[activeIndex]} />
   );
 };
 
-export default Header;
+export default Slider;

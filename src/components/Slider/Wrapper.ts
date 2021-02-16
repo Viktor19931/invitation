@@ -21,8 +21,39 @@ export const BackgroundOverlay = styled.div`
   width: 100%;
   height: 100%;
   opacity: 0.73;
-  background-color: #ebe9f4;
   position: absolute;
+  background-color: #ebe9f4;
+`;
+
+export const Title = styled.h1`
+  margin: 0;
+  color: #676483;
+  font-size: 104px;
+  font-weight: 400;
+  font-family: "Alex Brush", Sans-serif;
+`;
+
+export const Subtitle = styled.p`
+  color: #7a7a7a;
+  font-size: 17px;
+  font-weight: 400;
+  margin-bottom: 6px;
+  letter-spacing: 6.2px;
+  text-transform: uppercase;
+  font-family: "Roboto", Sans-serif;
+`;
+
+export const Content = styled.div`
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 3;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 `;
 
 const Wrapper = styled.div`

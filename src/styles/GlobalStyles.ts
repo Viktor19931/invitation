@@ -5,6 +5,9 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     font-family: "Alex Brush", sans-serif;
   }
+  p {
+    margin: 0;
+  }
   @font-face {
   font-family: 'Alex Brush';
   font-style: normal;

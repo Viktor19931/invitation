@@ -3,6 +3,7 @@ import { FC } from "react";
 import Slider from "./components/Slider";
 import WeddingDaySection from "./components/WeddingDaySection";
 import Footer from "./components/Footer";
+import GuestForm from "./components/GuestForm";
 import GlobalStyles from "./styles/GlobalStyles";
 
 const App: FC = () => (
@@ -10,6 +11,7 @@ const App: FC = () => (
     <GlobalStyles />
     <Slider />
     <WeddingDaySection />
+    <GuestForm />
     <Footer />
   </div>
 );

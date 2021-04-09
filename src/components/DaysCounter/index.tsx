@@ -19,8 +19,6 @@ const useTime = (time: number) => {
   const minutes = ~~((diffDates % ONE_HOUR) / ONE_MINUTE);
   const seconds = ~~((diffDates % ONE_MINUTE) / ONE_SECOND);
 
-  console.log("WWW diffDates ", [days, hours, minutes, seconds]);
-
   return [days, hours, minutes, seconds] as const;
 };
 

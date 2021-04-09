@@ -6,7 +6,6 @@ export const SubTitle = styled.h2`
   font-weight: 400;
   margin: 0 0 20px;
   letter-spacing: 6.2px;
-  font-family: "Roboto", Sans-serif;
 `;
 
 export const Title = styled.h2`

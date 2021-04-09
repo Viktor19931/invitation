@@ -16,7 +16,6 @@ export const TimeSubtitle = styled.span`
   font-style: normal;
   letter-spacing: 3px;
   text-transform: uppercase;
-  font-family: "Roboto", Sans-serif;
 `;
 
 export const CellWrapper = styled.div`

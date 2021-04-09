@@ -40,7 +40,6 @@ export const Subtitle = styled.p`
   margin-bottom: 6px;
   letter-spacing: 6.2px;
   text-transform: uppercase;
-  font-family: "Roboto", Sans-serif;
 `;
 
 export const Content = styled.div`

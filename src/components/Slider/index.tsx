@@ -20,10 +20,6 @@ const Slider: FC = () => {
   const [activeIndex, setIndex] = useState(0);
 
   useEffect(() => {
-    console.log(activeIndex);
-  }, [activeIndex]);
-
-  useEffect(() => {
     const intervalId = setInterval(() => {
       setIndex((prevState) => (prevState === 2 ? 0 : prevState + 1));
     }, SLIDE_INTERVAL);

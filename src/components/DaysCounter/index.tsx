@@ -9,10 +9,10 @@ const DaysCounter: FC = () => {
 
   return (
     <Wrapper>
-      <TimeCell title="days" value={`${days}`.padStart(2, "0")} />
-      <TimeCell title="hours" value={`${hours}`.padStart(2, "0")} />
-      <TimeCell title="minutes" value={`${minutes}`.padStart(2, "0")} />
-      <TimeCell title="seconds" value={`${seconds}`.padStart(2, "0")} />
+      <TimeCell title="днів" value={days} />
+      <TimeCell title="годин" value={hours} />
+      <TimeCell title="хвилин" value={minutes} />
+      <TimeCell title="секунд" value={seconds} />
     </Wrapper>
   );
 };

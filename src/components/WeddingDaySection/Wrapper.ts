@@ -4,6 +4,7 @@ import { flexColumn, SectionTitle, MainSubtitle } from "../../styles/helpers";
 
 export const SubTitle = styled(MainSubtitle)`
   margin: 0 0 20px;
+  text-transform: uppercase;
 `;
 
 export const Title = styled(SectionTitle)`

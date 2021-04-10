@@ -5,8 +5,8 @@ import Wrapper, { SubTitle, Title } from "./Wrapper";
 
 const WeddingDaySection: FC = () => (
   <Wrapper>
-    <SubTitle>WEDDING DAY</SubTitle>
-    <Title as="h2">We Are Getting Married</Title>
+    <SubTitle>День весілля</SubTitle>
+    <Title as="h2">Ми одружуємось</Title>
     <DaysCounter />
   </Wrapper>
 );

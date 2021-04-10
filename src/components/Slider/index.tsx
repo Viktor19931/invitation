@@ -7,6 +7,7 @@ import Wrapper, {
   Content,
   Subtitle,
 } from "./Wrapper";
+import { useActiveSlide } from "./hooks";
 
 const bgs = [
   "https://templatekit.hellokuro.com/kunikaa/wp-content/uploads/2020/10/bg-header-2-wedding-rings-PKSEZUT.jpg",
@@ -14,26 +15,16 @@ const bgs = [
   "https://templatekit.hellokuro.com/kunikaa/wp-content/uploads/2020/10/bg-header-3-wedding-couple-at-destination-wedding-ceremony-BKX4KXJ.jpg",
 ];
 
-const SLIDE_INTERVAL = 5000;
-
 const Slider: FC = () => {
-  const [activeIndex, setIndex] = useState(0);
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setIndex((prevState) => (prevState === 2 ? 0 : prevState + 1));
-    }, SLIDE_INTERVAL);
-
-    return () => clearInterval(intervalId);
-  }, []);
+  const activeIndex = useActiveSlide();
 
   return (
     <Wrapper>
       <BackgroundOverlay />
       <Background {...{ activeIndex }} />
       <Content>
-        <Subtitle>the wedding of</Subtitle>
-        <Title as="h1">Viktor &Mariana</Title>
+        <Subtitle>Запрошуємо на весілля</Subtitle>
+        <Title as="h1">Віктора & Мар'яни</Title>
       </Content>
     </Wrapper>
   );

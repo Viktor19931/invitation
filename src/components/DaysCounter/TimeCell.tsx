@@ -4,13 +4,13 @@ import { CellWrapper, TimeTitle, TimeSubtitle } from "./Wrapper";
 
 type TimeCellProps = {
   title: string;
-  value: string;
+  value: number;
 };
 
 const TimeCell: FC<TimeCellProps> = ({ title, value }) => {
   return (
     <CellWrapper>
-      <TimeTitle>{value}</TimeTitle>
+      <TimeTitle>{`${value}`.padStart(2, "0")}</TimeTitle>
       <TimeSubtitle>{title}</TimeSubtitle>
     </CellWrapper>
   );

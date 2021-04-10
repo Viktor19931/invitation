@@ -29,11 +29,10 @@ export const BackgroundOverlay = styled.div`
 
 export const Title = styled(SectionTitle)`
   font-size: 104px;
-  font-family: "Alex Brush", Sans-serif;
 `;
 
 export const Subtitle = styled(MainSubtitle)`
-  color: #7a7a7a;
+  color: #5d5454;
   font-size: 17px;
   margin-bottom: 6px;
   text-transform: uppercase;

@@ -5,7 +5,7 @@ export const SectionTitle = styled.h3`
   font-size: 48px;
   font-weight: 400;
   letter-spacing: -0.3px;
-  font-family: "Times New Roman", Sans-serif;
+  font-family: "Caveat", cursive;
 `;
 
 export const MainSubtitle = styled.span`

@@ -3,9 +3,10 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyles = createGlobalStyle`
   body {
     margin: 0;
+    background: #EBE9F4;
     font-family: "Roboto", sans-serif;
   }
-  p, h3 {
+  p, h1, h2, h3 {
     margin: 0;
   }
   @font-face {

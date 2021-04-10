@@ -1,5 +1,7 @@
 import styled, { css } from "styled-components";
 
+import { flexColumn, SectionTitle, MainSubtitle } from "../../styles/helpers";
+
 export const BackgroundImage = styled.img<{ canAnimate: boolean }>`
   z-index: 1;
   width: 100%;
@@ -25,37 +27,31 @@ export const BackgroundOverlay = styled.div`
   background-color: #ebe9f4;
 `;
 
-export const Title = styled.h1`
-  margin: 0;
-  color: #676483;
+export const Title = styled(SectionTitle)`
   font-size: 104px;
-  font-weight: 400;
   font-family: "Alex Brush", Sans-serif;
 `;
 
-export const Subtitle = styled.p`
+export const Subtitle = styled(MainSubtitle)`
   color: #7a7a7a;
   font-size: 17px;
-  font-weight: 400;
   margin-bottom: 6px;
-  letter-spacing: 6.2px;
   text-transform: uppercase;
 `;
 
 export const Content = styled.div`
+  ${flexColumn};
+  top: 0;
+  left: 0;
+  z-index: 3;
   width: 100%;
   height: 100%;
-  left: 0;
-  top: 0;
-  z-index: 3;
-  display: flex;
   position: absolute;
   align-items: center;
-  flex-direction: column;
   justify-content: center;
 `;
 
-const Wrapper = styled.div`
+const Wrapper = styled.section`
   width: 100vw;
   height: 100vh;
   overflow: hidden;

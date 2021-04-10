@@ -33,7 +33,7 @@ const Slider: FC = () => {
       <Background {...{ activeIndex }} />
       <Content>
         <Subtitle>the wedding of</Subtitle>
-        <Title>Viktor &Mariana</Title>
+        <Title as="h1">Viktor &Mariana</Title>
       </Content>
     </Wrapper>
   );

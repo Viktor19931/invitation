@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { flexColumn, flexRow } from "../../styles/helpers";
+
 export const TimeTitle = styled.span`
   color: #676483;
   font-size: 69px;
@@ -19,12 +21,11 @@ export const TimeSubtitle = styled.span`
 `;
 
 export const CellWrapper = styled.div`
-  display: flex;
+  ${flexColumn}
   margin: 0 10px;
   min-width: 195px;
   min-height: 195px;
   align-items: center;
-  flex-direction: column;
   box-sizing: border-box;
   justify-content: center;
   border: 3px solid #b3b1c6;
@@ -32,8 +33,7 @@ export const CellWrapper = styled.div`
 `;
 
 const Wrapper = styled.div`
-  display: flex;
-  flex-direction: row;
+  ${flexRow};
 `;
 
 export default Wrapper;

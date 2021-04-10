@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const SectionTitle = styled.h3`
   color: #676483;
@@ -19,4 +19,13 @@ export const SecondarySubtitle = styled.span`
   font-size: 18px;
   font-weight: 400;
   letter-spacing: 0.2px;
+`;
+
+export const flexColumn = css`
+  display: flex;
+  flex-direction: column;
+`;
+export const flexRow = css`
+  display: flex;
+  flex-direction: row;
 `;

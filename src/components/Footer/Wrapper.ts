@@ -44,6 +44,6 @@ export const FbIcon = styled.i`
 
 export const InfoSection = styled.div``;
 
-const Wrapper = styled.div``;
+const Wrapper = styled.section``;
 
 export default Wrapper;

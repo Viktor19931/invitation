@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { flexColumn } from "../../styles/helpers";
+
 export const Content = styled.div`
   margin: auto;
   max-width: 683px;
@@ -15,10 +17,9 @@ export const Content = styled.div`
 `;
 
 export const FormWrapper = styled.form`
+  ${flexColumn};
   margin: auto;
-  display: flex;
   margin-top: 50px;
-  flex-direction: column;
   background-color: #ffffff94;
   padding: 80px 80px 80px 80px;
   box-shadow: 0px 0px 44px -14px rgb(0 0 0 / 50%);
@@ -63,7 +64,7 @@ export const SubmitButton = styled.button`
   text-transform: uppercase;
 `;
 
-const Wrapper = styled.div`
+const Wrapper = styled.section`
   width: 100%;
   padding: 100px 0;
   background: linear-gradient(

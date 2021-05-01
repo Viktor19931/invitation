@@ -1,6 +1,11 @@
 import styled, { css } from "styled-components";
 
-import { flexColumn, SectionTitle, MainSubtitle } from "../../styles/helpers";
+import {
+  flexColumn,
+  SectionTitle,
+  MainSubtitle,
+  media,
+} from "../../styles/helpers";
 
 export const BackgroundImage = styled.img<{ canAnimate: boolean }>`
   z-index: 1;
@@ -38,6 +43,17 @@ export const Subtitle = styled(MainSubtitle)`
   text-transform: uppercase;
 `;
 
+const wrapperOnMobile = media.phone`
+  ${Title} {
+    font-size: 78px;
+    max-width: 226px;
+    text-align: center;
+  }
+  img {
+    object-fit: cover;
+  }
+`;
+
 export const Content = styled.div`
   ${flexColumn};
   top: 0;
@@ -54,6 +70,7 @@ const Wrapper = styled.section`
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  ${wrapperOnMobile};
 `;
 
 export default Wrapper;

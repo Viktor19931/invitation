@@ -1,4 +1,9 @@
-import styled, { css } from "styled-components";
+import styled, {
+  css,
+  CSSObject,
+  FlattenSimpleInterpolation,
+  SimpleInterpolation,
+} from "styled-components";
 
 export const SectionTitle = styled.h3`
   color: #676483;
@@ -29,3 +34,39 @@ export const flexRow = css`
   display: flex;
   flex-direction: row;
 `;
+
+type DesktopFirstSizes<T> = {
+  tablet: T;
+  phone: T;
+};
+
+type MediaKey = keyof DesktopFirstSizes<number>;
+
+type MediaSizes = {
+  [key in MediaKey]: (
+    first: TemplateStringsArray | CSSObject,
+    ...interpolations: SimpleInterpolation[]
+  ) => FlattenSimpleInterpolation;
+};
+
+const desktopFirstSizes: DesktopFirstSizes<number> = {
+  tablet: 768,
+  phone: 414,
+};
+
+const setMedia = (size: number) => (
+  first: TemplateStringsArray | CSSObject,
+  ...interpolations: SimpleInterpolation[]
+): FlattenSimpleInterpolation => css`
+  @media (max-width: ${size}px) {
+    ${css(first, ...interpolations)};
+  }
+`;
+
+export const media: MediaSizes = (Object.keys(
+  desktopFirstSizes
+) as MediaKey[]).reduce((acc: MediaSizes, label: MediaKey) => {
+  acc[label] = setMedia(desktopFirstSizes[label]);
+
+  return acc;
+}, {} as MediaSizes);

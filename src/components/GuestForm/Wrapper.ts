@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { flexColumn } from "../../styles/helpers";
+import { flexColumn, media } from "../../styles/helpers";
 
 export const Content = styled.div`
   margin: auto;
@@ -14,6 +14,10 @@ export const Content = styled.div`
   h3 {
     margin: 10px 0;
   }
+`;
+
+const formOnMobile = media.phone`
+  padding: 80px 40px;
 `;
 
 export const FormWrapper = styled.form`
@@ -40,6 +44,7 @@ export const FormWrapper = styled.form`
     resize: none;
     height: 150px;
   }
+  ${formOnMobile};
 `;
 
 export const Control = styled.div`
@@ -64,6 +69,9 @@ export const SubmitButton = styled.button`
   text-transform: uppercase;
 `;
 
+const backgroundUrl =
+  "https://templatekit.hellokuro.com/kunikaa/wp-content/uploads/2020/10/bg-header-3-wedding-couple-at-destination-wedding-ceremony-BKX4KXJ.jpg";
+
 const Wrapper = styled.section`
   width: 100%;
   padding: 100px 0;
@@ -71,7 +79,7 @@ const Wrapper = styled.section`
       rgba(235, 233, 244, 0.5),
       rgba(235, 233, 244, 0.5)
     ),
-    url(https://templatekit.hellokuro.com/kunikaa/wp-content/uploads/2020/10/bg-header-3-wedding-couple-at-destination-wedding-ceremony-BKX4KXJ.jpg);
+    url(${backgroundUrl}) center / cover no-repeat;
 `;
 
 export default Wrapper;

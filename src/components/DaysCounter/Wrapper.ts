@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { flexColumn, flexRow } from "../../styles/helpers";
+import { flexColumn, flexRow, media } from "../../styles/helpers";
 
 export const TimeTitle = styled.span`
   color: #676483;
@@ -20,6 +20,18 @@ export const TimeSubtitle = styled.span`
   text-transform: uppercase;
 `;
 
+const cellWrapperOnMobile = media.phone`
+  margin: 0 3px;
+  min-width: 83px;
+  min-height: 122px;
+  ${TimeTitle} {
+    font-size: 34px;
+  }
+  ${TimeSubtitle} {
+    font-size: 8px;
+  }
+`;
+
 export const CellWrapper = styled.div`
   ${flexColumn}
   margin: 0 10px;
@@ -30,6 +42,7 @@ export const CellWrapper = styled.div`
   justify-content: center;
   border: 3px solid #b3b1c6;
   padding: 31px 0px 43px 0px;
+  ${cellWrapperOnMobile};
 `;
 
 const Wrapper = styled.div`

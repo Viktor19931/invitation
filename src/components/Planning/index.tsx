@@ -6,7 +6,6 @@ import Wrapper, {
   Title,
   EventDate,
   AddressTitle,
-  AddressValue,
 } from "./Wrapper";
 import { SectionTitle, MainSubtitle } from "../../styles/helpers";
 

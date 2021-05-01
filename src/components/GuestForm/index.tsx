@@ -34,7 +34,7 @@ const GuestForm: FC = () => (
             <FieldControl
               name="email"
               placeholder="Електронна скринька"
-              validate={composeValidators(required, email)}
+              validate={email}
             />
 
             <FieldControl

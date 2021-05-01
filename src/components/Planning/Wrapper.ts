@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { flexColumn, flexRow, MainSubtitle } from "../../styles/helpers";
+import { flexColumn, flexRow, MainSubtitle, media } from "../../styles/helpers";
 
 export const Title = styled.h3`
   color: #676483;
@@ -28,25 +28,28 @@ export const AddressTitle = styled.span`
   font-family: "Times New Roman", Sans-serif;
 `;
 
-export const AddressValue = styled.p`
-  font-size: 20px;
-  font-weight: 400;
-  font-family: "Times New Roman", Sans-serif;
-`;
-
 export const CardItem = styled.div`
   ${flexColumn};
   flex: 1;
   justify-content: center;
 `;
 
+const cardOnMobile = media.phone`
+  ${flexColumn};
+  width: calc(100% - 20px);
+  ${CardItem}:last-of-type {
+    margin-top: 50px;
+  }
+`;
+
 export const Card = styled.div`
   ${flexRow};
   width: 100%;
-  margin: 35px auto 0;
   padding: 100px 0;
   max-width: 1140px;
+  margin: 35px auto 0;
   box-shadow: 0px 0px 44px -14px rgb(0 0 0 / 50%);
+  ${cardOnMobile};
 `;
 
 const Wrapper = styled.section`

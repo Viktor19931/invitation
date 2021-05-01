@@ -19,7 +19,7 @@ export const handleSubmit = (
   form.reset();
 };
 
-const isEmail = (email: string) => /^.+@.+\..+$/.test(email);
+const isEmail = (value?: string) => value && /^.+@.+\..+$/.test(value);
 
 export const email = (value: string) =>
   isEmail(value) ? undefined : "Не вірна електронна адреса";

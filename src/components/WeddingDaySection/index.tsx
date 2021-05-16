@@ -5,8 +5,10 @@ import Wrapper, { SubTitle, Title } from "./Wrapper";
 
 const WeddingDaySection: FC = () => (
   <Wrapper>
-    <SubTitle>День весілля</SubTitle>
-    <Title as="h2">Ми одружуємось</Title>
+    <Title as="h2">
+      День весілля <br /> 26 червня 2021р.
+    </Title>
+    <SubTitle>До весілля залишилося</SubTitle>
     <DaysCounter />
   </Wrapper>
 );

@@ -16,23 +16,23 @@ const Planning: FC = () => {
       <SectionTitle>Де і Коли</SectionTitle>
       <Card>
         <CardItem>
-          <Title>Церемонія вінчання</Title>
-          <EventDate>30/07/2021 13:00</EventDate>
+          <Title>Таїнство вінчання</Title>
+          <EventDate>26/06/2021 13:45</EventDate>
 
-          <AddressTitle>Address</AddressTitle>
+          <AddressTitle>Адреса</AddressTitle>
           <EventDate>
-            Jl. Cempaka 2882, Tegalsari <br />
-            Surabaya, Jawa Timur
+            місто Львів, вул. Пасічна 83, <br />
+            церква Благовіщення Пресвятої Богородиці
           </EventDate>
         </CardItem>
         <CardItem>
           <Title>Святковий бенкет</Title>
-          <EventDate>30/07/2021 17:00</EventDate>
+          <EventDate>26/06/2021 17:00</EventDate>
 
-          <AddressTitle>Address</AddressTitle>
+          <AddressTitle>Адреса</AddressTitle>
           <EventDate>
-            Jl. Mayjend Sungkono 212, <br />
-            Surabaya, Jawa Timur
+            місто Львів, вул. Медової Печери 65, <br />
+            ресторан "Медова Печера"
           </EventDate>
         </CardItem>
       </Card>

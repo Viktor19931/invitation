@@ -11,6 +11,7 @@ export const BackgroundImage = styled.img<{ canAnimate: boolean }>`
   z-index: 1;
   width: 100%;
   height: 100%;
+  object-fit: cover;
   position: relative;
   transform: scale(1);
   ${({ canAnimate }) =>
@@ -26,7 +27,7 @@ export const BackgroundOverlay = styled.div`
   left: 0;
   z-index: 2;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   opacity: 0.73;
   position: absolute;
   background-color: #ebe9f4;

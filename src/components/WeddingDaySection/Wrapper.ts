@@ -21,6 +21,9 @@ const Wrapper = styled.section`
   align-items: center;
   background: #6ec1e400;
   justify-content: center;
+  ${SubTitle}, ${Title} {
+    text-align: center;
+  }
 `;
 
 export default Wrapper;

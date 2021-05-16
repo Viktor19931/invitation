@@ -8,12 +8,19 @@ import Wrapper, {
   Subtitle,
 } from "./Wrapper";
 import { useActiveSlide } from "./hooks";
+import isMobile from "../../helpers/isMobile";
 
-const bgs = [
-  "https://templatekit.hellokuro.com/kunikaa/wp-content/uploads/2020/10/bg-header-2-wedding-rings-PKSEZUT.jpg",
-  "https://templatekit.hellokuro.com/kunikaa/wp-content/uploads/2020/10/bg-header-1-happy-newly-married-couple-with-boho-style-bouquet-N26JKP7.jpg",
-  "https://templatekit.hellokuro.com/kunikaa/wp-content/uploads/2020/10/bg-header-3-wedding-couple-at-destination-wedding-ceremony-BKX4KXJ.jpg",
-];
+import bg1_mob from "../../static/images/bg1-mob.jpeg";
+import bg2_mob from "../../static/images/bg2-mob.jpg";
+import bg3_mob from "../../static/images/bg3-mob.jpg";
+import bg1_des from "../../static/images/bg1-des.jpg";
+import bg2_des from "../../static/images/bg2-des.jpg";
+import bg3_des from "../../static/images/bg3-des.jpg";
+
+const bgs_mob = [bg2_mob, bg3_mob, bg1_mob];
+const bgs_des = [bg1_des, bg2_des, bg3_des];
+
+const bgs = isMobile() ? bgs_mob : bgs_des;
 
 const Slider: FC = () => {
   const activeIndex = useActiveSlide();

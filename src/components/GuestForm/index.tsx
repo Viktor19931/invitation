@@ -19,9 +19,10 @@ import FieldControl from "./FieldControl";
 const GuestForm: FC = () => (
   <Wrapper>
     <Content>
-      <MainSubtitle>ТИ ЗАПРОШЕНИЙ</MainSubtitle>
-      <SectionTitle>МИ НЕ МОЖЕМО ДОЧЕКАТИСЯ НА ТЕБЕ</SectionTitle>
-      <SecondarySubtitle>БУДЬ-ЛАСКА ЗАЛИШИ ПОБАЖАННЯ =)</SecondarySubtitle>
+      <SectionTitle>
+        З великим задоволенням запрошуємо Вас провести цей незабутній у нашому
+        житті день разом з нами!
+      </SectionTitle>
 
       <Form onSubmit={handleSubmit}>
         {({ handleSubmit }) => (

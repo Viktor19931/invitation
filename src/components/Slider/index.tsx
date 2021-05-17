@@ -10,9 +10,9 @@ import Wrapper, {
 import { useActiveSlide } from "./hooks";
 import isMobile from "../../helpers/isMobile";
 
-import bg1_mob from "../../static/images/bg1-mob.jpeg";
-import bg2_mob from "../../static/images/bg2-mob.jpg";
-import bg3_mob from "../../static/images/bg3-mob.jpg";
+import bg1_mob from "../../static/images/bg1-mob.png";
+import bg2_mob from "../../static/images/bg2-mob.png";
+import bg3_mob from "../../static/images/bg3-mob.png";
 import bg1_des from "../../static/images/bg1-des.jpg";
 import bg2_des from "../../static/images/bg2-des.jpg";
 import bg3_des from "../../static/images/bg3-des.jpg";

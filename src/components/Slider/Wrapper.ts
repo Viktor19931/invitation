@@ -43,16 +43,15 @@ export const GuestNameTitle = styled(Title)`
 `;
 
 export const Subtitle = styled(MainSubtitle)`
-  color: #5d5454;
+  color: #171516;
   font-size: 17px;
-  margin-bottom: 6px;
+  margin: 16px 0 6px 0;
   text-transform: uppercase;
 `;
 
 const wrapperOnMobile = media.phone`
   ${Title} {
-    font-size: 78px;
-    max-width: 226px;
+    font-size: 60px;
     text-align: center;
   }
   img {

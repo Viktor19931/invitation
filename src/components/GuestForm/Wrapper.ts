@@ -87,6 +87,7 @@ export const MessageContainer = styled.div`
   left: 50%;
   bottom: 20px;
   padding: 10px;
+  min-width: 200px;
   position: absolute;
   border-radius: 5px;
   background: #8dc78dcf;

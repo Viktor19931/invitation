@@ -35,6 +35,11 @@ export const BackgroundOverlay = styled.div`
 
 export const Title = styled(SectionTitle)`
   font-size: 104px;
+  text-align: center;
+`;
+
+export const GuestNameTitle = styled(Title)`
+  font-size: 80px;
 `;
 
 export const Subtitle = styled(MainSubtitle)`

@@ -24,6 +24,7 @@ export const FormWrapper = styled.form`
   ${flexColumn};
   margin: auto;
   margin-top: 50px;
+  position: relative;
   background-color: #ffffff94;
   padding: 80px 80px 80px 80px;
   box-shadow: 0px 0px 44px -14px rgb(0 0 0 / 50%);
@@ -80,6 +81,16 @@ const Wrapper = styled.section`
       rgba(235, 233, 244, 0.5)
     ),
     url(${backgroundUrl}) center / cover no-repeat;
+`;
+
+export const MessageContainer = styled.div`
+  left: 50%;
+  bottom: 20px;
+  padding: 10px;
+  position: absolute;
+  border-radius: 5px;
+  background: #8dc78dcf;
+  transform: translateX(-50%);
 `;
 
 export default Wrapper;

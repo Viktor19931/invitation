@@ -31,7 +31,7 @@ const Slider: FC = () => {
 
   useEffect(() => {
     const params = toObject<{ [k: string]: string }>(window.location.search);
-    params.for && setGuestName(params.for);
+    params.for && setGuestName(decodeURIComponent(params.for));
   }, []);
 
   return (
